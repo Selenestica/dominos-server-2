@@ -36,6 +36,7 @@ router.post('/add-order', async (req, res) => {
     })
     order.StoreID = myStore.ID
 
+    console.log(req.body)
     let itemArray = req.body.itemCode
     for (item = 0; item < itemArray.length; item ++) {
         order.addItem(
