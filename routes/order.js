@@ -38,6 +38,7 @@ router.post('/add-order', async (req, res) => {
 
     console.log(req.body)
     let itemArray = req.body.itemCode
+    console.log(itemArray)
     for (item = 0; item < itemArray.length; item ++) {
         order.addItem(
             new pizzaapi.Item({
