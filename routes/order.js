@@ -67,12 +67,6 @@ router.post('/add-order', async (req, res) => {
             }
         )
 
-        return res
-            .status(200)
-            .json(req.body)
-            .end()
-
-        /*
         //pass in cc info
         let cardNumber = req.body.cardNumber
         let cardInfo = new order.PaymentObject()
@@ -92,7 +86,12 @@ router.post('/add-order', async (req, res) => {
                 console.log(util.inspect(result, false, null, true))
             }
         )
-        */
+
+        return res
+            .status(200)
+            .json(req.body)
+            .end()
+
     }
     catch (error) {
         return res
