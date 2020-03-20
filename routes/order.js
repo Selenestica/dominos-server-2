@@ -67,7 +67,7 @@ router.post('/add-order', async (req, res) => {
             }
         )
 
-        return response
+        return res
             .status(200)
             .json(req.body)
             .end()
@@ -95,7 +95,7 @@ router.post('/add-order', async (req, res) => {
         */
     }
     catch (error) {
-        return response
+        return res
             .status(500)
             .json({error: error.toString()})
             .end()
