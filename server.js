@@ -19,6 +19,6 @@ app.get('/', (req, res) => {
 })
 
 if (port == null || port == "") {
-    port = 8000;
+    port = 80;
   }
   app.listen(port);
